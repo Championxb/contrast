@@ -6,6 +6,10 @@ import ComplianceDocuments from '../components/ComplianceDocuments.vue'
 import InvoiceDetails from '../components/InvoiceDetails.vue'
 import ContractorType from '../components/ContractorType.vue'
 import Contracts from '../components/Contracts.vue'
+import InvoiceReceipts from '../components/InvoiceReceipts.vue'
+import AppsPerks from '../components/AppsPerks.vue'
+import TaxForms from '../components/TaxForms.vue'
+import OrganizationSettings from '../components/OrganizationSettings.vue'
 
 const routes = [
     {
@@ -42,6 +46,26 @@ const routes = [
         path: '/contracts',
         name: 'Contracts',
         component: Contracts
+    },
+    {
+        path: '/invoice-receipts',
+        name: 'InvoiceReceipts',
+        component: InvoiceReceipts
+    },
+    {
+        path: '/apps-perks',
+        name: 'AppsPerks',
+        component: AppsPerks
+    },
+    {
+        path: '/tax-forms',
+        name: 'TaxForms',
+        component: TaxForms
+    },
+    {
+        path: '/organization-settings',
+        name: 'OrganizationSettings',
+        component: OrganizationSettings
     }
 ]
 

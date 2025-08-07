@@ -2,8 +2,8 @@
   <div class="contractor-type-page">
     <div class="modal-container">
       <div class="modal-header">
-        <button class="back-btn">←</button>
-        <button class="close-btn">✕</button>
+        <button class="back-btn" @click="goBack">←</button>
+        <button class="close-btn" @click="closeModal">✕</button>
       </div>
 
       <div class="modal-content">
@@ -42,7 +42,7 @@
           </div>
         </div>
 
-        <button class="continue-btn">继续</button>
+        <button class="continue-btn" @click="continueToNext">继续</button>
       </div>
     </div>
   </div>
@@ -50,7 +50,20 @@
 
 <script>
 export default {
-  name: 'ContractorType'
+  name: 'ContractorType',
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    },
+    closeModal() {
+      this.$router.push('/');
+    },
+    continueToNext() {
+      // 这里可以根据选择的合同类型导航到不同的页面
+      // 目前简单地导航到合同列表页面
+      this.$router.push('/contracts');
+    }
+  }
 }
 </script>
 

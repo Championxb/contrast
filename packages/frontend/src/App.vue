@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { RouterView } from 'vue-router'
 import Header from './components/Header.vue'
 import Sidebar from './components/Sidebar.vue'
-
+// import HelloApi from './components/HelloApi.vue'
 const isSidebarOpen = ref(false)
 
 const toggleSidebar = () => {
@@ -13,6 +13,7 @@ const toggleSidebar = () => {
 
 <template>
   <div class="app">
+    <!-- <HelloApi /> -->
     <Header class="header" :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
     <div class="main-container">
       <Sidebar :isSidebarOpen="isSidebarOpen" />
